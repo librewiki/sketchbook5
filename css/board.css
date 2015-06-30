@@ -4,9 +4,9 @@
 .bd,.bd input,.bd textarea,.bd select,.bd button,.bd table{font-size:12px;line-height:1.5}
 .bd{color:#444}
 .bd em{font-style:normal}
-.bd a{text-decoration:none;color:#333;transition:border-color .4s,box-shadow .4s,background .4s,color .4s,opacity .4s}
+.bd a{text-decoration:none;color:#333 !important;transition:border-color .4s,box-shadow .4s,background .4s,color .4s,opacity .4s}
 .bd a:hover{text-decoration:underline;color:#000}
-.bd fieldset{margin:0;padding:0;border:0}
+.bd fieldset{margin:0;padding:0;border:0;background-color:inherit}
 .bd label,.bd button{cursor:pointer}
 .fl{float:left}
 .fr{float:right}
@@ -21,11 +21,12 @@
 /* Common */
 /* Form */
 .bd_btn,.bd textarea,.bd .itx,.bd select,.btn_img{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;transition:border .4s,background .4s;*zoom:1}
+.bd_btns, .poll_button {background-color:rgba(0, 0, 0, 0) !important;border:1px solid !important;color:rgb(16, 16, 16) !important;border-color:#CCC #C6C6C6 #C3C3C3 #CCC !important;background-image:linear-gradient(rgb(255, 255, 255) 0%, rgb(243, 243, 243) 100%) !important;}
 .bd_btn,.btn_img{display:inline-block;position:relative;height:28px;margin:0;padding:4px 20px;background:#F3F3F3 url(../img/ie/btn.png) repeat-x;background:-webkit-gradient(linear,0% 0%,0% 100%,from(#FFF),to(#F3F3F3));background:linear-gradient(to bottom,#FFF 0%,#F3F3F3 100%);border:1px solid;border-color:#CCC #C6C6C6 #C3C3C3 #CCC;border-radius:3px;white-space:nowrap;cursor:pointer;text-decoration:none !important;text-align:center;text-shadow:0 1px 0 #FFF;box-shadow:inset 0 0 1px 1px #FFF,0 1px 1px rgba(0,0,0,.1);*display:inline;*zoom:1}
 .btn_img{padding:4px 14px 4px 10px;font-size:11px;line-height:1.6;border-color:#CCC;background:#FCFCFC;letter-spacing:-1px;box-shadow:none}
 .btn_img.no{padding:4px 18px}
 .bd_btn.blue{font-weight:700;color:#FFF;text-shadow:0 1px 0 #000;border-color:#669 !important;box-shadow:0 1px 1px rgba(0,0,0,.1);background:#55B url(../img/ie/btn_blue.gif) repeat-x;background:-webkit-gradient(linear,0% 0%,0% 100%,from(#77C),to(#55B));background:linear-gradient(to bottom,#77C 0%,#55B 100%)}
-.bd_btn:hover,.bd_btn:focus,.btn_img:hover,.btn_img:focus{border-color:#AAA;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.bd_btn:hover,.bd_btn:focus,.btn_img:hover,.btn_img:focus{border-color:#AAA !important;box-shadow:0 1px 4px rgba(0,0,0,.2) !important}
 .bd_btn[disabled=disabled]{box-shadow:none !important}
 .bd .itx,.bd select{display:inline-block;margin:0;padding:4px 6px;background:#FAFAFA;border-radius:3px;border:1px solid;border-color:#BBB #DDD #DDD #BBB;*display:inline;*zoom:1}
 .bd .itx{height:28px}

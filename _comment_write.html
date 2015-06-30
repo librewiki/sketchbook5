@@ -28,7 +28,7 @@
 			<input type="hidden" id="htm_{$oDocument->document_srl}" value="n" />
 			<textarea id="editor_{$oDocument->document_srl}" cols="50" rows="4"></textarea>
 		</div>
-		<input type="submit" value="{$lang->cmd_submit}" class="bd_btn" />
+		<input type="submit" value="{$lang->cmd_submit}" class="bd_btn bd_btns" />
 	</div>
 	<div class="edit_opt clear" style="display:none"|cond="$mi->cmt_wrt!='editor'">
 		<block cond="!$is_logged">
@@ -98,7 +98,7 @@
 			<a cond="!$is_logged" class="cmt_disable bd_login" href="#">{$lang->write_comment} {$lang->msg_not_permitted} {$lang->bd_login}</a>
 			<div cond="$is_logged" class="cmt_disable bd_login">{$lang->write_comment} {$lang->msg_not_permitted}</div>
 		</div>
-		<input type="button" value="{$lang->cmd_submit}" disabled="disabled" class="bd_btn" />
+		<input type="button" value="{$lang->cmd_submit}" disabled="disabled" class="bd_btn bd_btns" />
 	</div>
 </div>
 <!--@end-->

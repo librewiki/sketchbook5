@@ -105,7 +105,7 @@
 	<!--// Buttons -->
 	<div class="regist">
 		<button cond="$is_logged && !$oDocument->isExists() || $oDocument->get('status')=='TEMP'" type="button" onclick="doDocumentSave(this);" class="bd_btn temp">{$lang->cmd_temp_save}</button>
-		<input type="button" value="{$lang->cmd_preview}" onclick="doDocumentPreview(this);return false" class="bd_btn m_no" />
+		<input type="button" value="{$lang->cmd_preview}" onclick="doDocumentPreview(this);return false" class="bd_btn m_no bd_btns" />
 		<input type="submit" value="{$lang->cmd_submit}" class="bd_btn blue" />
 		<button type="button" onclick="history.back()" class="bd_btn cancle">{$lang->cmd_back}</button>
 	</div>
