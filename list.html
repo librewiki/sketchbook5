@@ -51,27 +51,6 @@ jQuery(function($){
 			</ul><button type="button" class="tg_blur2"></button>
 		</div>
 	</div>
-	<!--// 우측 상단 설정 메뉴 -->
-	<div class="bd_set fr m_btn_wrp m_no">
-		<block cond="$grant->view && $mi->default_style!='guest' && $mi->default_style!='blog'">
-		<a cond="$oDocument->isExists() && !$mi->viewer" class="bg_f_f9" href="#" onclick="window.open('{getUrl('listStyle','viewer','page','')}','viewer','width=9999,height=9999,scrollbars=yes,resizable=yes,toolbars=no');return false"><em>✔</em> <strong>{$lang->viewer}</strong></a>
-		<!--@if($mi->link_board)-->
-		<a cond="$mi->viewer_with!='N'" class="viewer_with bubble<!--@if($mi->viewer_with=='2' || $_COOKIE['cookie_viewer_with']=='Y')--> on<!--@end-->" href="#" title="{$lang->with_viewer_info}."><em>✔</em> <strong>{$lang->link_site_viewer}</strong></a>
-		<!--@else-->
-		<a cond="!$oDocument->isExists() && $mi->viewer_with!='N'" class="viewer_with rd_viewer bubble<!--@if($mi->viewer_with=='2' || $_COOKIE['cookie_viewer_with']=='Y')--> on<!--@end-->" href="#" title="{$lang->with_viewer_info}."><em>✔</em> <strong>{$lang->with_viewer}</strong></a>
-		<!--@end-->
-		</block>
-		<block cond="!$oDocument->isExists()">
-		<a cond="!$mi->srch_window" class="show_srch bubble" href="#" title="{$lang->search_info}"><b class="ico_16px search"></b>{$lang->cmd_search}</a>
-		<a cond="!$mi->write_btn || ($mi->write_btn!='N' && $grant->write_document)" href="{getUrl('act','dispBoardWrite','document_srl','')}"><b class="ico_16px write"></b>{$lang->cmd_write}</a>
-		<span cond="$mi->font_btn=='2'" class="font_select"><a class="select tg_btn2" href="#" data-href=".bd_font_select"><b class="tx_ico_chk">T</b>{$lang->font}<i class="arrow down"></i></a></span>
-		<block cond="$grant->manager">
-		<a href="{getUrl('act','dispBoardAdminBoardInfo')}"><b class="ico_16px setup"></b>{$lang->cmd_setup}</a>
-		<a class="m_no" href="{getUrl('','module','document','act','dispDocumentManageDocument')}" onclick="popopen(this.href,'manageDocument');return false"><b class="tx_ico_chk">✔</b>{$lang->cmd_manage_document}</a>
-		<input cond="$mi->default_style!='list'" type="checkbox" onclick="XE.checkboxToggleAll({ doClick:true });" class="iCheck" title="Check All" />
-		</block>
-		</block>
-	</div>
 	<!--// 본문 내비 -->
 	<include cond="$oDocument->isExists() && $mi->rd_nav=='2'" target="_read_nav.html" />
 </div>
