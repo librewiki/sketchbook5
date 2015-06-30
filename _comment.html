@@ -17,8 +17,8 @@
 <!--@end-->
 		<!--// 프로필 -->
 		<block cond="!$mi->profile_img">
-		<img cond="$comment->getProfileImage()" class="profile img" src="{$comment->getProfileImage()}" alt="profile" />
-		<span cond="!$comment->getProfileImage()" class="profile img no_img">?</span>
+		<img cond="$comment->getProfileImage()" class="profile img" src="//www.gravatar.com/avatar/{md5($comment->getIpaddress())}?d=identicon&f=y" alt="profile" />
+		<img cond="!$comment->getProfileImage()" class="profile img" src="//www.gravatar.com/avatar/{md5($comment->getIpaddress())}?d=identicon&f=y" alt="profile" />
 		</block>
 		<!--// 댓글 정보 -->
 		<div class="meta">
