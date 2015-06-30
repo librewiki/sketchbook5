@@ -17,8 +17,7 @@
 <!--@end-->
 		<!--// 프로필 -->
 		<block cond="!$mi->profile_img">
-		<img cond="$comment->getProfileImage()" class="profile img" src="//www.gravatar.com/avatar/{md5($comment->getIpaddress())}?d=identicon&f=y" alt="profile" />
-		<img cond="!$comment->getProfileImage()" class="profile img" src="//www.gravatar.com/avatar/{md5($comment->getIpaddress())}?d=identicon&f=y" alt="profile" />
+		<img id="profile_{$comment->comment_srl}" class="profile img" src="" />
 		</block>
 		<!--// 댓글 정보 -->
 		<div class="meta">
@@ -76,6 +75,11 @@
 			</span>
 		</div>
 	</li>
+	<script>
+		var identicon = new Identicon("{md5($comment->get('document_srl') . $comment->getNickName() )}", 420).toString();
+                var imgsrc = 'data:image/png;base64,' + identicon;
+        	document.getElementById("profile_{$comment->comment_srl}").src = imgsrc;
+	</script>
 	</block>
 </ul>
 
