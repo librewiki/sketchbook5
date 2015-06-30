@@ -159,10 +159,10 @@ var allowedFileTypes = '<!--@if($grant->manager)-->*.*<!--@else-->{$file_config-
 	<!--// 비로그인 입력 -->
 	<div class="edit_opt">
 		<block cond="!$is_logged">
-            		<input type="text" name="nick_name" id="nick_name" value="{getenv("REMOTE_ADDR");}" class="itx n_p" />
-		        <input type="password" name="password" id="password" class="itx n_p" value="{getenv("REMOTE_ADDR");}" />
-        		<input type="text" name="email_address" id="email_address" value="{htmlspecialchars($oDocument->get('email_address'))}" class="itx m_h" />
-			<input type="text" name="homepage" id="homepage" value="{htmlspecialchars($oDocument->get('homepage'))}" class="itx m_h" />
+            		<input type="hidden" name="nick_name" id="nick_name" value="{getenv("REMOTE_ADDR");}" class="itx n_p" />
+		        <input type="hidden" name="password" id="password" class="itx n_p" value="{getenv("REMOTE_ADDR");}" />
+        		<input type="hidden" name="email_address" id="email_address" value="{htmlspecialchars($oDocument->get('email_address'))}" class="itx m_h" />
+			<input type="hidden" name="homepage" id="homepage" value="{htmlspecialchars($oDocument->get('homepage'))}" class="itx m_h" />
 		</block>
 	</div>
 

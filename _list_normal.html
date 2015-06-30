@@ -53,7 +53,7 @@ $order_type="desc";
 				<span class="extraimages">{$document->printExtraImages(60*60*$mi->duration_new)}</span>
 			</td>
 			</block>
-			<td class="author" cond="$val->type=='nick_name' && $val->idx==-1"><span><a href="#popup_menu_area" class="member_{$document->get('member_srl')}" onclick="return false">{$document->getNickName()}</a></span></td>
+			<td class="author" cond="$val->type=='nick_name' && $val->idx==-1"><span>{$document->getNickName()}</span></td>
 			<td class="author" cond="$val->type=='user_id' && $val->idx==-1"><span>{$document->getUserID()}</span></td>
 			<td class="author" cond="$val->type=='user_name' && $val->idx==-1"><span>{$document->getUserName()}</span></td>
 			<td class="time" cond="$val->type=='regdate' && $val->idx==-1">{$document->getRegdate('Y.m.d')}</td>
@@ -103,7 +103,7 @@ $order_type="desc";
 				<a cond="$mi->link_board && $document->isEditable()" class="link_modify" href="{getUrl('document_srl',$document->document_srl)}">{$lang->cmd_modify}</a>
 			</td>
 			</block>
-			<td class="author" cond="$val->type=='nick_name' && $val->idx==-1"><span><a href="#popup_menu_area" class="member_{$document->get('member_srl')}" onclick="return false">{$document->getNickName()}</a></span></td>
+			<td class="author" cond="$val->type=='nick_name' && $val->idx==-1"><span>{$document->getNickName()}</span></td>
 			<td class="author" cond="$val->type=='user_id' && $val->idx==-1"><span>{$document->getUserID()}</span></td>
 			<td class="author" cond="$val->type=='user_name' && $val->idx==-1"><span>{$document->getUserName()}</span></td>
 			<td class="time" cond="$val->type=='regdate' && $val->idx==-1" title="{getTimeGap($document->get('regdate'), "H:i")}">{$document->getRegdate('Y.m.d')}</td>

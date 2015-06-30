@@ -22,9 +22,8 @@
 		</block>
 		<!--// 댓글 정보 -->
 		<div class="meta">
-			<a cond="$comment->member_srl" href="#popup_menu_area" class="member_{$comment->member_srl}" onclick="return false">{$comment->getNickName()}</a>
+			{$comment->getNickName()}
 			<a cond="!$comment->member_srl && $comment->homepage" href="{$comment->getHomepageUrl()}" target="_blank">{$comment->getNickName()}</a>
-			<b cond="!$comment->member_srl && !$comment->homepage">{$comment->getNickName()}</b>
 			<span class="date">{getTimeGap($comment->get('regdate'), "Y.m.d H:i")}</span>
 			<small cond="$grant->manager || $mi->display_ip_address" class="m_no">({$comment->getIpaddress()})</small>
 			<span cond="$comment->isSecret()" class="ico_secret">SECRET</span>

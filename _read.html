@@ -16,7 +16,7 @@
 			<div class="top_area {$mi->rd_tl_font}" style="{$mi->rd_tl_css};">
 				<strong cond="!$mi->rd_cate && $mi->use_category=='Y' && $oDocument->get('category_srl')" class="cate fl" title="Category">{$category_list[$oDocument->get('category_srl')]->title}</strong>
 				<div class="fr">
-					<a cond="$mi->rd_nick=='2'" href="#popup_menu_area" class="nick member_{$oDocument->get('member_srl')}" onclick="return false">{$oDocument->getNickName()}</a>
+					{$oDocument->getNickName()}
 					<span cond="!$mi->rd_date" class="date m_no">{$oDocument->getRegdate('Y.m.d H:i')}</span>
 				</div>
 				<h1 class="np_18px"><a href="{$oDocument->getPermanentUrl()}">{$oDocument->getTitle()}</a></h1>
@@ -24,7 +24,7 @@
 			<div class="btm_area clear">
 				<img cond="$mi->rd_profile=='Y' && $oDocument->getProfileImage()" class="img fl" src="{$oDocument->getProfileImage()}" alt="profile" title="{$oDocument->getNickName()}" />
 				<div class="side">
-					<a cond="!$mi->rd_nick" href="#popup_menu_area" class="nick member_{$oDocument->get('member_srl')}" onclick="return false">{$oDocument->getNickName()}</a>
+					{$oDocument->getNickName()}
 					<a cond="$mi->rd_link=='2'" class="link m_no" href="{$oDocument->getPermanentUrl()}">{$oDocument->getPermanentUrl()}</a>
 					<span cond="$mi->rd_date=='2'" class="date">{$oDocument->getRegdate('Y.m.d H:i')}</span>
 					<strong cond="$mi->rd_cate=='2' && $mi->use_category=='Y' && $oDocument->get('category_srl')" class="cate" title="Category">{$category_list[$oDocument->get('category_srl')]->title}</strong>
@@ -37,7 +37,7 @@
 				<div class="side fr">
 					<small cond="$grant->manager || $mi->display_ip_address" class="m_no">({$oDocument->getIpaddress()}) </small>
 					<a cond="$mi->rd_link=='3'" class="link m_no" href="{$oDocument->getPermanentUrl()}">{$oDocument->getPermanentUrl()}</a>
-					<a cond="$mi->rd_nick=='3'" href="#popup_menu_area" class="nick member_{$oDocument->get('member_srl')}" onclick="return false">{$oDocument->getNickName()}</a>
+					{$oDocument->getNickName()}
 					<span cond="$mi->rd_date=='3'" class="date">{$oDocument->getRegdate('Y.m.d H:i')}</span>
 					<strong cond="$mi->rd_cate=='3' && $mi->use_category=='Y' && $oDocument->get('category_srl')" class="cate" title="Category">{$category_list[$oDocument->get('category_srl')]->title}</strong>
 					<block cond="!$mi->rd_info">
