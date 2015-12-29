@@ -24,7 +24,8 @@
 			{$comment->getNickName()}
 			<a cond="!$comment->member_srl && $comment->homepage" href="{$comment->getHomepageUrl()}" target="_blank">{$comment->getNickName()}</a>
 			<span class="date">{getTimeGap($comment->get('regdate'), "Y.m.d H:i")}</span>
-			<small cond="$grant->manager || $mi->display_ip_address" class="m_no" title="{$comment->getIpaddress()}">마우스를 올리면 확인이 가능합니다.</small>
+			<!--<small cond="$grant->manager || $mi->display_ip_address" class="m_no" title="{$comment->getIpaddress()}">마우스를 올리면 확인이 가능합니다.</small>-->
+			<a cond="$grant->manager || $mi->display_ip_address" class="m_no" title="아이피를 확인합니다." href="{getUrl('act','dispBoardGetipaddress','document_srl',$oDocument->document_srl,'comment_srl',$comment->comment_srl)}"><small>아이피를 확인 합니다.</small></a>
 			<span cond="$comment->isSecret()" class="ico_secret">SECRET</span>
 			<!--// 첨부파일 -->
 			<block cond="$comment->hasUploadedFiles()">
